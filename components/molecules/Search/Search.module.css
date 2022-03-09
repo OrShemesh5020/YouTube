@@ -1,7 +1,9 @@
 .wrapper {
   display: flex;
   position: relative;
-}
-.input {
   width: 50%;
+  justify-content: center;
+}
+.input{
+  width: 80%;
 }

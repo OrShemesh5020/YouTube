@@ -1,7 +1,8 @@
 import styles from './SearchInput.module.css'
-const SearchInput=()=>{
+import classNames from 'classnames'
+const SearchInput=({className}:{className:object})=>{
 return(
-        <input className={styles.input} placeholder="search"></input>
+        <input className={classNames(styles.input,className)} placeholder="search"></input>
 );
 }
 export default SearchInput;

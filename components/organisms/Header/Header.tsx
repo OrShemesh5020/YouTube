@@ -1,19 +1,42 @@
-import Menu from '../../molecules/Menu/Menu';
+import Logo from '../../atoms/Logo/Logo';
+import Menu from '../Menu/Menu';
 import Profile from '../../molecules/Profile/Profile';
 import Search from '../../molecules/Search/Search';
 import styles from './Header.module.css'
+
+const items=[
+    {
+    iconSrc:'',
+    title:"home page"
+},
+    {
+    iconSrc:'',
+    title:"what's new"
+},
+    {
+    iconSrc:'',
+    title:'library'
+},
+    {
+    iconSrc:'',
+    title:'history'
+},
+    {
+    iconSrc:'',
+    title:'my videos'
+},
+    {
+    iconSrc:'',
+    title:'continue watching'
+},
+]
 const Header=()=>{
     return(
         <div className={styles.header}>
-            <div className={styles.leftSide}>
-                <Menu/>
-            </div>
-            <div className={styles.middelSide}>
+                <Menu items={items}/>
+                <Logo/>
                 <Search/>
-            </div>
-            <div className={styles.rightSide}>
                 <Profile/>
-            </div>
         </div>
     );
 

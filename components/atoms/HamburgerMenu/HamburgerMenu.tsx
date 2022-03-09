@@ -1,8 +1,9 @@
 import Hamburger from './HamburgerMenu.png'
 import Image from 'next/image'
+import styles from './HamburgerMenu.module.css'
 const HamburgerMenu=()=>{
 return(
-     <Image onClick={clicked} src={Hamburger} alt="Hamburger menu"></Image>
+     <div className={styles.menu}><Image  onClick={clicked} src={Hamburger} alt="Hamburger menu"></Image></div>
 );
 }
 

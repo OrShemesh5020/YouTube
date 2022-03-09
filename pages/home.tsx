@@ -5,7 +5,7 @@ import Head from "next/head";
 const Home: NextPage = () => {
 return(
     <>
-        <div><Header/></div>
+        <Header/>
     </>    
 )}
 export default Home;
