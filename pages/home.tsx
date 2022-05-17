@@ -4,8 +4,6 @@ import Head from "next/head";
 
 const Home: NextPage = () => {
 return(
-    <>
-        <Header/>
-    </>    
+    <div>home page</div>
 )}
 export default Home;
