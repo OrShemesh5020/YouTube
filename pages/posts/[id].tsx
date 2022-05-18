@@ -2,7 +2,12 @@ import type { NextPage } from 'next'
 import { Post } from '../../models/Post.d'
 
 const Posts: NextPage<{ post: Post }> = ({ post }) => {
-  return (post && Object.keys(post).length ? <div><h1 >{post.title}</h1>
+  return (
+    post && Object.keys(post).length ?
+
+
+
+    <div><h1 >{post.title}</h1>
     <span >{post.body}</span></div> : <h1 >NOT FOUND</h1>
   )
 };
