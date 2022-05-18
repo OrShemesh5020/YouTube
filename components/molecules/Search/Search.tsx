@@ -3,7 +3,8 @@ import SearchInput from '../../atoms/SearchInput/SearchInput';
 import Button from '../../atoms/SearchButton/SearchButton';
 import styles from './Search.module.css';
 import SearchResults from '../../../mock/SearchResults';
-const Search = () => {
+import classNames from 'classnames';
+const Search = ({className}:{className:string}) => {
   const [filteredData,setFilteredData]=useState([]);
   const handleFilter=(event)=>{
     const searchWord= event.target.value
@@ -17,7 +18,7 @@ const Search = () => {
     }
   }
   return (
-    <div className={styles.search}>
+    <div className={classNames(styles.search,className)} >
     <div className={styles.wrapper}>
       <div className={styles.inputWrapper}>
       <SearchInput className={styles.input} onChange={handleFilter}/>

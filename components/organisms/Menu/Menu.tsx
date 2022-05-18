@@ -1,8 +1,9 @@
 import HamburgerMenu from "../../atoms/HamburgerMenu/HamburgerMenu";
 import styles from './Menu.module.css'
-const Menu=({items}:{items:[{iconSrc:string,title:string}]})=>{
+import classNames from 'classnames';
+const Menu=({items,className}:{items:{iconSrc:string,title:string}[],className:string})=>{
     return (
-        <div className={styles.wrapper}>
+        <div className={classNames(styles.wrapper,className)}>
             <HamburgerMenu/>
             
         </div>

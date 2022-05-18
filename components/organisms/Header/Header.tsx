@@ -3,6 +3,7 @@ import Menu from '../Menu/Menu';
 import Profile from '../../molecules/Profile/Profile';
 import Search from '../../molecules/Search/Search';
 import styles from './Header.module.css'
+import search from './../../../pages/search';
 
 const items=[
     {
@@ -33,10 +34,10 @@ const items=[
 const Header=()=>{
     return(
         <div className={styles.header}>
-                <Menu items={items}/>
-                <Logo/>
-                <Search/>
-                <Profile/>
+                <Menu items={items} className={styles.menu}/>
+                <Logo className={styles.logo}/>
+                <Search className={styles.search}/>
+                <Profile className={styles.profile}/>
         </div>
     );
 
