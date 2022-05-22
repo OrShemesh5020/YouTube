@@ -3,13 +3,13 @@ import SearchInput from '../../atoms/SearchInput/SearchInput';
 import Button from '../../atoms/SearchButton/SearchButton';
 import styles from './Search.module.css';
 import SearchResults from '../../../mock/SearchResults';
-const Search = () => {
+import classNames from 'classnames';
+const Search = ({ className }: { className: string }) => {
   const [filteredData, setFilteredData] = useState([]);
   const handleFilter = (event) => {
     const searchWord = event.target.value;
-    // console.log(searchWord);
     const filterResults = SearchResults.filter((val) => {
-      return val.title.toLowerCase().includes(searchWord.toLowerCase());
+      return val.title.toLowerCase().startsWith(searchWord.toLowerCase());
     });
     setFilteredData(filterResults);
     if (searchWord === '') {
