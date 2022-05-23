@@ -3,7 +3,6 @@ import Menu from '../Menu/Menu';
 import Profile from '../../molecules/Profile/Profile';
 import Search from '../../molecules/Search/Search';
 import styles from './Header.module.css'
-import search from './../../../pages/search';
 
 const items=[
     {
