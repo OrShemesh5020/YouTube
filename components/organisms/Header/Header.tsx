@@ -7,27 +7,33 @@ import styles from './Header.module.css'
 const items=[
     {
     iconSrc:'',
-    title:"home page"
+    title:"home page",
+    href:'/home'
 },
     {
     iconSrc:'',
-    title:"what's new"
+    title:"what's new",
+    href:'/'
 },
     {
     iconSrc:'',
-    title:'library'
+    title:'library',
+    href:'/'
 },
     {
     iconSrc:'',
-    title:'history'
+    title:'history',
+    href:'/'
 },
     {
     iconSrc:'',
-    title:'my videos'
+    title:'my videos',
+    href:'/'
 },
     {
     iconSrc:'',
-    title:'continue watching'
+    title:'continue watching',
+    href:'/'
 },
 ]
 const Header=()=>{
