@@ -1,0 +1,12 @@
+.wrapper {
+  display: flex;
+  max-width: 40px;
+  /* position: relative; */
+}
+.subMenu{
+  /* border: solid black 2px; */
+  background-color: white;
+  position: absolute;
+  margin-top: 40px;
+}
+
