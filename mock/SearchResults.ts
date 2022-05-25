@@ -1,4 +1,5 @@
-const SearchResults=[{
+import SearchResults from "../types/searchResults";
+const SearchResults:SearchResults=[{
   "id": 1,
   "title": "erat"
 }, {

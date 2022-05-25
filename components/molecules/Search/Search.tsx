@@ -18,9 +18,6 @@ const Search = ({className}:{className:string}) => {
     });
 
     setFilteredData(filterResults);
-    // if (searchWord ===""){
-    //   setFilteredData([]);
-    // }
     setIsResultsListOpen(Boolean(filterResults.length))
   }
 
