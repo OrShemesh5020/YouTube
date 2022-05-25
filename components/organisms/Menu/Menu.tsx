@@ -4,20 +4,16 @@ import classNames from 'classnames';
 import { useState } from 'react';
 import Link from "next/link";
 const Menu=({items,className}:{items:{iconSrc:string,title:string}[],className:string})=>{
-    const [isClicked,ToggleIsClicked]=useState(false);
+    const [isClicked,toggleIsClicked]=useState(false);
     return (
         <div className={classNames(styles.wrapper,className)}>
-            <HamburgerMenu onClick={clicked}/>
+            <HamburgerMenu onClick={()=> toggleIsClicked(!isClicked)}/>
             {isClicked &&(
                 <div className={styles.subMenu}>{items.map((val)=>{
-                    return <div onClick={clicked}><Link href={val.href}>{val.title}</Link></div>
+                    return <div key={val.id} onClick={()=> toggleIsClicked(!isClicked)}><Link href={val.href}>{val.title}</Link></div>
                 })}</div>
             )}
         </div>
     );
-    function clicked(event) {
-        // console.log(event) 
-        ToggleIsClicked(!isClicked)
-    }
 }
 export default Menu;
