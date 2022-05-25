@@ -3,7 +3,8 @@ import styles from './Menu.module.css'
 import classNames from 'classnames';
 import { useState } from 'react';
 import Link from "next/link";
-const Menu=({items,className}:{items:{iconSrc:string,title:string}[],className:string})=>{
+import Items from "../../../types/appMenuItems";
+const Menu=({items,className}:{items:Items,className:string})=>{
     const [isClicked,toggleIsClicked]=useState(false);
     return (
         <div className={classNames(styles.wrapper,className)}>

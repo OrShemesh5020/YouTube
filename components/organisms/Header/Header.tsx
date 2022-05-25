@@ -3,8 +3,10 @@ import Menu from '../Menu/Menu';
 import Profile from '../../molecules/Profile/Profile';
 import Search from '../../molecules/Search/Search';
 import styles from './Header.module.css'
+import Items from '../../../types/appMenuItems';
 
-const items=[
+/*  */
+const items:Items=[
     {
     id:1,
     iconSrc:'',
