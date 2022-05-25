@@ -6,25 +6,36 @@ import SearchResults from '../../../mock/SearchResults';
 import classNames from 'classnames';
 const Search = ({className}:{className:string}) => {
   const [filteredData,setFilteredData]=useState([]);
-  const handleFilter=(event)=>{
+  const [isResultsListOpen,setIsResultsListOpen]=useState(false)
+  const [selectedResult,setSelectedResult]=useState("");
+
+  const onChange = (event) => {
+    setSelectedResult(event.target.value)
     const searchWord= event.target.value
-     const filterResults=SearchResults.filter((val)=>{
-      return val.title.toLowerCase().startsWith(searchWord.toLowerCase())
+    
+    const filterResults=searchWord===""?[]:SearchResults.filter((val)=>{
+      return val.title.toLowerCase().includes(searchWord.toLowerCase())
     });
+
     setFilteredData(filterResults);
-    if (searchWord ===""){
-      setFilteredData([]);
-    }
+    // if (searchWord ===""){
+    //   setFilteredData([]);
+    // }
+    setIsResultsListOpen(Boolean(filterResults.length))
   }
+
   return (
     <div className={classNames(styles.search,className)} >
     <div className={styles.wrapper}>
       <div className={styles.inputWrapper}>
-      <SearchInput className={styles.input} onChange={handleFilter}/>
-      {filteredData.length!=0 &&(
+      <SearchInput value={selectedResult} className={styles.input} onChange={onChange}/>
+      {isResultsListOpen && (
         <div className={styles.dataResult}>
          {filteredData.slice(0,10).map((val)=>{
-           return <div className={styles.dataItem}>{val.title}</div>;
+           return <div key={val.id} onClick={()=>{
+            setSelectedResult(val.title);
+            setIsResultsListOpen(false)
+         }} className={styles.dataItem}>{val.title}</div>;
           })}
        </div>
        )}
