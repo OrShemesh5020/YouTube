@@ -1,11 +1,14 @@
 import React,{useState} from 'react';
 import SearchInput from '../../atoms/SearchInput/SearchInput';
-import Button from '../../atoms/SearchButton/SearchButton';
+import SearchButton from '../../atoms/SearchButton/SearchButton';
 import styles from './Search.module.css';
 import SearchResults from '../../../mock/SearchResults';
 import classNames from 'classnames';
 const Search = ({className}:{className:string}) => {
-  const [filteredData,setFilteredData]=useState([]);
+  const [filteredData,setFilteredData]=useState([{
+    id:0,
+    title:""
+  }]);
   const [isResultsListOpen,setIsResultsListOpen]=useState(false)
   const [selectedResult,setSelectedResult]=useState("");
 
@@ -18,9 +21,6 @@ const Search = ({className}:{className:string}) => {
     });
 
     setFilteredData(filterResults);
-    // if (searchWord ===""){
-    //   setFilteredData([]);
-    // }
     setIsResultsListOpen(Boolean(filterResults.length))
   }
 
@@ -42,7 +42,7 @@ const Search = ({className}:{className:string}) => {
        </div>
     </div>
     <div className={styles.buttonWrapper}>
-      <Button />
+      <SearchButton />
     </div>
   </div>
   );
