@@ -1,3 +1,13 @@
 .wrapper {
-  display: flex;
+  float: right;
+  position: relative;
+}
+.subMenu {
+  border: solid black 2px;
+  background-color: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  margin-top: 40px;
+  width: 120px;
+  height: auto;
+  right: 0px;
 }
