@@ -6,31 +6,37 @@ import styles from './Header.module.css'
 
 const items=[
     {
+    id:1,
     iconSrc:'',
     title:"home page",
     href:'/home'
 },
     {
+    id:2,
     iconSrc:'',
     title:"what's new",
     href:'/'
 },
     {
+    id:3,
     iconSrc:'',
     title:'library',
     href:'/'
 },
     {
+    id:4,
     iconSrc:'',
     title:'history',
     href:'/'
 },
     {
+    id:5,
     iconSrc:'',
     title:'my videos',
     href:'/'
 },
     {
+    id:6,
     iconSrc:'',
     title:'continue watching',
     href:'/'
