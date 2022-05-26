@@ -1,7 +1,8 @@
 {
+  "parser": "@typescript-eslint/parser",
   "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
   "rules": {
-    "prettier/prettier": "off",
+    "prefer-const": "error",
     "import/no-webpack-loader-syntax": "off",
     "no-use-before-define": "warn",
     "no-undef": "warn",
@@ -11,20 +12,9 @@
     "no-useless-escape": "warn",
     "no-extra-boolean-cast": "warn",
     "no-empty": "warn",
-    "no-debugger": "warn"
+    "no-debugger": "warn",
+    "@typescript-eslint/rule-name": "error"
   },
-  "plugins": ["react-hooks"],
-  "overrides": [{
-      "extends": ["plugin:storybook/recommended"],
-      "files": ["**/*.stories.*"],
-      "rules": {
-        "import/no-anonymous-default-export": "off"
-      }
-    },
-    {
-      "extends": ["plugin:cypress/recommended"],
-      "files": ["cypress/**/*.js"]
-    }
-  ]
-
+  "plugins": ["react-hooks", "@typescript-eslint"],
+  "overrides": []
 }
