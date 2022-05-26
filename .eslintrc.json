@@ -1,3 +1,30 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "rules": {
+    "prettier/prettier": "off",
+    "import/no-webpack-loader-syntax": "off",
+    "no-use-before-define": "warn",
+    "no-undef": "warn",
+    "no-unused-vars": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-unsafe-optional-chaining": "warn",
+    "no-useless-escape": "warn",
+    "no-extra-boolean-cast": "warn",
+    "no-empty": "warn",
+    "no-debugger": "warn"
+  },
+  "plugins": ["react-hooks"],
+  "overrides": [{
+      "extends": ["plugin:storybook/recommended"],
+      "files": ["**/*.stories.*"],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    },
+    {
+      "extends": ["plugin:cypress/recommended"],
+      "files": ["cypress/**/*.js"]
+    }
+  ]
+
 }
