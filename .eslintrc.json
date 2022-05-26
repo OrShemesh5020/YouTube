@@ -15,6 +15,6 @@
     "no-debugger": "warn",
     "@typescript-eslint/rule-name": "error"
   },
-  "plugins": ["react-hooks", "@typescript-eslint"],
+  "plugins": ["react-hooks", "@typescript-eslint/eslint-plugin"],
   "overrides": []
 }
