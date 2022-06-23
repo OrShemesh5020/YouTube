@@ -4,16 +4,20 @@ import classNames from 'classnames';
 import { useState } from 'react';
 import Link from "next/link";
 import Items from "../../../types/appMenuItems";
-const Menu=({items,className}:{items:Items,className:string})=>{
+import Logo from "../../atoms/Logo/Logo";
+const Menu=({items,wrspperClass,logoClass}:{items:Items,wrspperClass:string,logoClass:string})=>{
     const [isClicked,toggleIsClicked]=useState(false);
     return (
-        <div className={classNames(styles.wrapper,className)}>
-            <HamburgerMenu onClick={()=> toggleIsClicked(!isClicked)}/>
-            {isClicked &&(
-                <div className={styles.subMenu}>{items.map((val)=>{
-                    return <div key={val.id} onClick={()=> toggleIsClicked(!isClicked)}><Link href={val.href}>{val.title}</Link></div>
-                })}</div>
-            )}
+        <div className={classNames(wrspperClass)}>
+            <div className={classNames(styles.menuClass)}>
+                <HamburgerMenu onClick={()=> toggleIsClicked(!isClicked)}/>
+                {isClicked &&(
+                    <div className={styles.subMenu}>{items.map((val)=>{
+                        return <div key={val.id} onClick={()=> toggleIsClicked(!isClicked)}><Link href={val.href}>{val.title}</Link></div>
+                    })}</div>
+                )}
+            </div>
+            <Logo className={logoClass}></Logo>
         </div>
     );
 }

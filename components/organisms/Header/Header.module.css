@@ -6,11 +6,16 @@
   margin-bottom: 10px;
   align-items: center;
 }
-.menu{
-width: 5%;
+.wrapperMenu{
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
 }
 .logo{
-width: 10%;
+width: 50%;
 display: flex;
 align-items: center;
 }

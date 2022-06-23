@@ -1,8 +1,9 @@
-.wrapper {
+.menuClass {
+  width: 20%;
   display: flex;
-  max-width: 40px;
-  position: relative;
+  justify-content: center;
 }
+
 .subMenu{
   /* border: solid black 2px; */
   background-color: white;
