@@ -1,7 +1,10 @@
-import styles from './SearchInput.module.css'
-const SearchInput=()=>{
-return(
-        <input className={styles.input} placeholder="search"></input>
-);
-}
+import styles from './SearchInput.module.css';
+import classNames from 'classnames';
+
+const SearchInput = ({ className, onChange }:{ className: object, onChange: Function }) => {
+  return(
+          <input className={classNames(styles.input,className)} placeholder="Search..." onChange={onChange}></input>
+  );
+};
+
 export default SearchInput;
