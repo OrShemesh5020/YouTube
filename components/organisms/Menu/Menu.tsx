@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Link from "next/link";
 import Items from "../../../types/appMenuItems";
 import Logo from "../../atoms/Logo/Logo";
-const Menu=({items,wrspperClass,logoClass}:{items:Items,wrspperClass:string,logoClass:string})=>{
+const Menu=({items,wrspperClass}:{items:Items,wrspperClass:string})=>{
     const [isClicked,toggleIsClicked]=useState(false);
     return (
         <div className={classNames(wrspperClass)}>
@@ -17,7 +17,7 @@ const Menu=({items,wrspperClass,logoClass}:{items:Items,wrspperClass:string,logo
                     })}</div>
                 )}
             </div>
-            <Logo className={logoClass}></Logo>
+            <Logo className={styles.logo}></Logo>
         </div>
     );
 }

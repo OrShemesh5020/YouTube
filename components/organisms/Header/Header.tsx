@@ -47,8 +47,7 @@ const items:Items=[
 const Header=()=>{
     return(
         <div className={styles.header}>
-                <Menu items={items} wrspperClass={styles.wrapperMenu} logoClass={styles.logo}/>
-                {/* <Logo className={styles.logo}/> */}
+                <Menu items={items} wrspperClass={styles.wrapperMenu}/>
                 <Search className={styles.search}/>
                 <Profile className={styles.profile}/>
         </div>
