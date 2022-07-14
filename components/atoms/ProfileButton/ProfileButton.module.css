@@ -1,8 +1,12 @@
 .button {
   border-radius: 100%;
+  display: flex;
+  align-items: center;
+  float: right;
   width: 90px;
   height: auto;
 }
+
 .img {
   border-radius: 100%;
 }

@@ -4,6 +4,7 @@ import SearchButton from '../../atoms/SearchButton/SearchButton';
 import styles from './Search.module.css';
 import SearchResults from '../../../mock/SearchResults';
 import classNames from 'classnames';
+
 const Search = ({ className }: { className: string }) => {
   const [filteredData, setFilteredData] = useState([
     {
