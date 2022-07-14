@@ -1,8 +1,17 @@
-.wrapper {
+.menuClass {
+  width: 40px;
+  height: 40px;
   display: flex;
-  max-width: 40px;
-  position: relative;
+  justify-content: center;
+  padding: 8px;
 }
+.logo{
+width: 120px;
+padding: 18px 14px 18px 16px;
+display: flex;
+align-items: center;
+}
+
 .subMenu{
   /* border: solid black 2px; */
   background-color: white;
