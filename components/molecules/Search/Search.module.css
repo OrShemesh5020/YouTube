@@ -1,5 +1,8 @@
 .search{
   display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  flex: 0 1 728px;
 }
 .wrapper {
   display: flex;

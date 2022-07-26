@@ -30,14 +30,17 @@ const Search = ({ className }: { className: string }) => {
   };
 
   return (
-    <div className={styles.search}>
+    <div className={classNames(styles.search,className)} >
       <div className={styles.wrapper}>
         <div className={styles.inputWrapper}>
-          <SearchInput className={styles.input} onChange={handleFilter} />
-          {filteredData.length != 0 && (
+          <SearchInput value={selectedResult} className={styles.input} onChange={onChange}/>
+          {isResultsListOpen && (
             <div className={styles.dataResult}>
-              {filteredData.slice(0, 10).map((val) => {
-                return <div className={styles.dataItem}>{val.title}</div>;
+              {filteredData.slice(0,10).map((val)=>{
+                return <div key={val.id} onClick={()=>{
+                  setSelectedResult(val.title);
+                  setIsResultsListOpen(false)
+                }} className={styles.dataItem}>{val.title}</div>;
               })}
             </div>
           )}
