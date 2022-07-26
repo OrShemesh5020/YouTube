@@ -4,44 +4,51 @@ import Profile from '../../molecules/Profile/Profile';
 import Search from '../../molecules/Search/Search';
 import styles from './Header.module.css'
 import Items from '../../../types/appMenuItems';
+import { Compass, House, MonitorPlay, PresentationChart } from 'phosphor-react';
 
 /*  */
 const items:Items=[
     {
     id:1,
     iconSrc:'',
-    title:"home page",
-    href:'/home'
+    title:"Home",
+    href:'/home',
+    iconClass: <House size={24} weight="thin" />
 },
-    {
+{
     id:2,
     iconSrc:'',
-    title:"what's new",
-    href:'/'
+    title:"Explore",
+    href:'/',
+    iconClass:<Compass size={24} weight="thin" />
 },
-    {
+{
     id:3,
     iconSrc:'',
-    title:'library',
-    href:'/'
+    title:'Shorts',
+    href:'/',
+    iconClass: <MonitorPlay size={24} weight="thin" />
 },
-    {
+{
     id:4,
     iconSrc:'',
-    title:'history',
-    href:'/'
+    title:'Subscriptions',
+    href:'/',
+    iconClass: <PresentationChart size={24} weight="thin" />
 },
-    {
+{
     id:5,
     iconSrc:'',
     title:'my videos',
-    href:'/'
+    href:'/',
+    iconClass: <House size={24} weight="fill" />
 },
-    {
+{
     id:6,
     iconSrc:'',
     title:'continue watching',
-    href:'/'
+    href:'/',
+    iconClass: <House size={24} weight="fill" />
 },
 ]
 const Header=()=>{
